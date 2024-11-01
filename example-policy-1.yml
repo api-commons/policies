@@ -1,0 +1,36 @@
+name: API Versioning
+slug: api-versioning
+description: Providing semantic or date-based versioning for an API, offering an overview of what is adopted for an API and why, letting consumers know that their is change management in place and how they can tune into communication.
+scope: Business Contract
+property: none
+type: Versioning  
+guidance: change/versioning
+image: /images/versions.png
+
+policies:
+  - versioning-semantic-versioning
+  - versioning-date-base
+
+tags:
+  - Change
+  - Semantic Versioning
+  - Date Based Versioning
+
+experiences:
+  - Alignment  
+  - Change
+  - Communication
+  - Consistency
+  - Quality
+  - Reliability
+
+rules:
+  - apis-json-apis-properties-versioning-info
+
+research:
+
+  - name: Evolving HTTP APIs
+    description: One of the most vexing problems that still seems to be facing people when I talk to them about HTTP APIs is how to handle versioning and extensibility – i.e., how they evolve.
+    url: https://www.mnot.net/blog/2012/12/04/api-evolution 
+
+discussion: https://github.com/api-evangelist/policies/issues/1    

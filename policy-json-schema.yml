@@ -1,0 +1,88 @@
+---
+"$schema": http://json-schema.org/2020-12/schema
+type: object
+properties:
+  name:
+    type: string
+    description: The name to accurately describe the policy.
+  slug:
+    type: string
+    description: A slugified version of the policy name.
+  description:
+    type: string
+    description: A more detailed description of a policy.
+  scope:
+    type: string
+    description: What scope of API operations does it apply.
+    enum:
+      - Business Contract
+      - Technical Contract
+  property:
+    type: string
+    description: A JSON Path pointing to a specific property.
+  type:
+    type: string
+    description: The APIs.json property type that applies.
+  guidance:
+    type: string
+    description: A reference to guidance in support of policy.
+  image:
+    type: string
+    description: A visual image or icon representing policy.
+  policies:
+    type: array
+    description: A listing of related policies for a policy.
+    items:
+    - type: string
+  tags:
+    type: array
+    description: A listing of tags that are applied to policy.
+    items:
+    - type: string
+  experiences:
+    type: array
+    description: The experiences impacted by a policy existing.
+    items:
+    - type: string
+  rules:
+    type: array
+    description: The Spectral rules that automate a policy.
+    items:
+    - type: string
+  research:
+    type: array
+    description: References to any research conducted to inform a policy.
+    items:
+    - type: object
+      properties:
+        name:
+          type: string
+          description: A name describing the research conducted.
+        description:
+          type: string
+          description: More detail regarding the value of research.
+        url:
+          type: string
+          description: A URL reference to support the research.
+      required:
+      - name
+      - description
+      - url
+  discussion:
+    type: string
+    description: A URL to where the discussion for a policy is occurring.
+required:
+- name
+- slug
+- description
+- scope
+- property
+- type
+- guidance
+- image
+- policies
+- tags
+- experiences
+- rules
+- research
+- discussion
